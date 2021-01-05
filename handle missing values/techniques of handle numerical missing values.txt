@@ -1,0 +1,31 @@
+1. mean/median/mode replacement
+
+   assumptions... data missed as completly at random
+   solve this by replacing the NAN values by most frequent occurance of the variable
+   disadvantages.... chnage the original variance
+
+2. random sample imputation
+   
+   assumptions... data missed as completly at random
+   take a random observation from dataset and we use this to replace NAN values
+   advantages....... original variance not much chaged
+   disadvantages...... this not work in every situations eg.. when NAN valeus ratio is high
+   
+3. capturing NAN values as a new feature
+
+   it works when you have data not missed completly at random (MNAR)
+   systemetic missing values
+   advantages.... capture the importance of missing values
+   disadvantages..... create a additional column (curse of dimensinality)
+
+4. end of distribution imputation
+
+   we can use this for see outlier
+   in this scenario one would want to replace misssing data with values that are at the tail of the distributionof the 
+   variable
+   this makes dissapear the oitliers
+
+
+5. arbitary imputation
+
+   not frequntly using......

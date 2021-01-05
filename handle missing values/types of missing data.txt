@@ -1,0 +1,11 @@
+1. missing completly at random (MCAR)
+   data has missed randomly and no relatiinsip with other values for misssing data
+   usually MCAR has little amount of data missing 
+
+2. missing data not at randomly (MNAR)
+   there is a reltionship between data missing and other values.
+   eg :- age and cabbin in titanic datab set
+
+3. missing at random (MAR)
+   men - hide salery
+   women - hide age

@@ -1,0 +1,4 @@
+1. frequent category imputation
+2. adding a variable to capture NAN
+3. NAN replace with a new category feature (most used and importent one)
+4. deleting rows
