@@ -1,0 +1,7 @@
+1. one hot encoding
+2. one hot encoding with many category features
+3. ordinal number encoding
+4. count or frequency encoding
+5. target guided ordinal encoding
+6. mean encoding
+7. probability ratio encoding
