@@ -1,0 +1,89 @@
+                                      PIPLINE FOR A REGRESSION ML PROJECT
+
+1. data analysis part
+2. feature engineering part
+3. feature selection part
+4. model building part
+5. deployment
+
+
+--------------------------------------DATA ANALYSIS PART-----------------------------------
+
+ MAin aim is to understand more about the data
+ here we dont change our dataset we use a copy of data set to when we are doing data analyzis
+ here our main target is by exploring dataset find the realtionships...make conclutions ....plans what to do in feature engineering part
+
+In Data Analysis We will Analyze To Find out the below stuff
+1.Missing Values
+2.All The Numerical Variables
+3.Distribution of the Numerical Variables
+4.Categorical Variables
+5.Cardinality of Categorical Variables
+6.Outliers
+7.Relationship between independent and dependent feature(SalePrice)
+
+  here wwe just count the missing values in each columns ..not handle ...handking doin in feature engineering phase.
+  take a misssing value columns list
+  since they are many missing values, we need to find the relationship between missing values and Sales Price
+  we have to group by using relevent feature and draw bar charts (categorical) with respective dependant feature
+  we ned to find the what are the numerical featurs nd count of numerical features
+  take a list of numerical variables
+  check whether you have Temporal Variables(Eg: Datetime Variables) and find the realtionship between each temporal feature 
+  with respective dependant feature
+  get a year_feature list(year_feature = [feature for feature in numerical_features if 'Yr' in feature or 'Year' in feature])
+  then draw some graphs (scatter flot)
+  get discrete feature list (you can derived from numerical list)
+  Find the realtionship between them and Sale PRice draw bar chart
+  get continuous feature list (you can derived from numerical list)
+  Find the realtionship between them and Sale PRice draw histogram 
+  We will be using logarithmic transformation and respective dependant feature
+  cheack weaather there are outliers (draw box plot)
+  take acategorical feature list
+  find the cardinallaty of categorical features
+  Find out the relationship between categorical variable and dependent feature SalesPrice (bar charts)
+
+
+-------------------------------------------FEATURE ENGINEERING PART------------------------------------------------------
+
+
+here we basically make up our data set for readable to model
+
+1. handle missing values
+    *numerical
+    *categorical
+2. handle temporal values
+3. handle categorical values
+4. transformation---logarathimic
+4. scaling
+
+
+
+always remember there way always be a chance of data leakage so we need to split the data first and then apply feature
+handle missing value for categoory feature
+take categorical feature list with NAN values
+converted NAN values in to a new category as 'missing' for every features
+take numerical feature list with NAN values
+in data analysis we saw lot of outlier ..so we replace with median not with mean
+create a new feature to capture nan values (for get some more information by adding a new column)
+replace nan values with its meadian value
+take care temporal varibales (datetime variables)
+Handling Rare Categorical Feature
+We will give a new caegory label to a categorical variables that are present less than 1% of the observations
+Transformation of features
+Since the numerical variables are skewed we will perform log normal distribution
+we dont do feature scale to id and our dependat featur
+after feature scaling transform the train and test set, and add on the Id and SalePrice variables
+data.to_csv('X_train.csv',index=False)
+do same steps (analysis phase and feature engineering pahase ) to your test data file.
+
+
+
+
+--------------------------------------------FEATURE SELECTION PART-----------------------------------------
+
+take your data set which already preprocessed
+Capture the dependent feature
+y_train=dataset[['SalePrice']]
+drop dependent feature from dataset
+X_train=dataset.drop(['Id','SalePrice'],axis=1)
+Apply Feature Selection
