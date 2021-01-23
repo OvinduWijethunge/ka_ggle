@@ -1,7 +1,7 @@
 
 # compare survival rate across Age, SibSp, Parch, and Fare(numerical variables)
  
-pd.pivot_table(training, index = 'Survived', values = ['Age','SibSp','Parch','Fare'], ,aggfunc ='max')
+pd.pivot_table(training, index = 'Survived', values = ['Age','SibSp','Parch','Fare'], ,aggfunc ) 
 
 	Age	Fare	Parch	SibSp
 Survived				
@@ -33,4 +33,4 @@ The first argument is just the dataframe containing our data.
 values, is the one we want to apply the aggregating function on. For example, in this case we want to count the number of passengers (via PassengerId).
 index, is the feature (or features) that we group by on the row axis. So the row labels of our table will be the unique values of this feature. In pivot1, it is age_bin.
 columns, is the feature (or features) that we group by on the column axis. In pivot1, it is gender.
-Finally, aggfunc is the function we apply to values. Here we apply count, but we can also apply sum, mean, min, max, or others.
+Finally, aggfunc is the function we apply to values. Here we apply count, but we can also apply count,sum, mean, min, max, or others.
